@@ -1,3 +1,5 @@
-*.iml
-/.idea/
-spark.iml
+/build
+/.idea
+/.gradle
+/local.properties
+.gitignore
