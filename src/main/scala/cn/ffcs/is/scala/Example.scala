@@ -26,7 +26,7 @@ object Example {
     //import scala.BigInt._
     probablePrime(100,Random)
     println("infi"(0))
-    println("infi1"last)
+    println("infi1".last)
     println("infi1".take(2))
     println("infi1".drop(1))
     println("infi1".takeRight(1))
@@ -682,6 +682,7 @@ object Example {
     class Person(var name : String = "infi", var age : Int = 18){
 
     }
+
 
     val person = new Person()
     println(person.name)
