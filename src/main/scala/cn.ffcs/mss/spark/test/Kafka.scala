@@ -38,10 +38,6 @@ object Kafka {
   }
 
  
- 
- 
- 
- 
   /**
     * 创建一个从kafka获取数据的流.
     * @param scc           spark streaming上下文
