@@ -38,8 +38,7 @@ object Kafka {
   }
 
 
-
-
+  val test = 0
 
 
   /**

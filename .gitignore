@@ -1,7 +1,3 @@
-/build
-/.idea
-/.gradle
-/local.properties
 .gitignore
 *.iml
 .DS_Store
