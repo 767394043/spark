@@ -32,6 +32,7 @@ object Example {
     println("infi1".takeRight(1))
     println("infi1".dropRight(1))
 
+
   }
 
   def two() : Unit = {
