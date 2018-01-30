@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+
+    <groupId>cn.ffcs</groupId>
+    <artifactId>spark</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spark.version>2.2.1</spark.version>
+        <scala.version>2.11.11</scala.version>
+        <hadoop.version>2.6.0-cdh5.4.0</hadoop.version>
+        <quartz.version>2.2.3</quartz.version>
+        <httpclient.version>4.5</httpclient.version>
+        <druid.version>0.9.0</druid.version>
+        <mysql-connector-java.version>5.1.42</mysql-connector-java.version>
+        <jama.version>1.0.3</jama.version>
+        <json.version>20140107</json.version>
+        <junit.version>4.10</junit.version>
+        <log4j-core.version>2.5</log4j-core.version>
+        <c3p0.version>0.9.1.2</c3p0.version>
+        <storm.version>0.10.0</storm.version>
+        <kafka.version>0.9.0.0</kafka.version>
+        <tranquility.version>0.8.0</tranquility.version>
+        <jackson-module.version>2.6.0</jackson-module.version>
+        <joda-time.version>2.0</joda-time.version>
+        <java-util.version>0.27.9</java-util.version>
+        <jackson-datatype-joda.version>2.4.2</jackson-datatype-joda.version>
+        <commons-lang.version>2.6</commons-lang.version>
+        <hive.version>1.1.0</hive.version>
+        <hbase.version>1.0.0</hbase.version>
+        <disruptor.version>3.2.0</disruptor.version>
+        <cxf.version>3.1.12</cxf.version>
+        <flume.version>1.8.0</flume.version>
+        <bind.version>2.3.0</bind.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.11</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming_2.11</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming-kafka-0-8_2.11</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>${scala.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.druid</groupId>
+            <artifactId>tranquility-spark_2.11</artifactId>
+            <version>${tranquility.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.druid</groupId>
+            <artifactId>tranquility-core_2.11</artifactId>
+            <version>${tranquility.version}</version>
+        </dependency>
+    </dependencies>
+
+
+    <!-- maven官方 http://repo1.maven.org/maven2/  或 http://repo2.maven.org/maven2/ （延迟低一些） -->
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Maven Repository Switchboard</name>
+            <layout>default</layout>
+            <url>http://repo2.maven.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <build>
+        <sourceDirectory>src/main/scala</sourceDirectory>
+        <testSourceDirectory>src/test/scala</testSourceDirectory>
+
+        <plugins>
+                <!-- MAVEN 编译使用的JDK版本 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
